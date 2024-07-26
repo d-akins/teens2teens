@@ -4,52 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>teens2teens</title>
-  <link rel="stylesheet" href="C:\Users\student\Documents\MyNewProject(IFE24)\Experimenting\static\styles\ResourcesPage.css">
+  <link rel="stylesheet" href="C:\Users\student\Documents\MyNewProject(IFE24)\Experimenting\static\styles\HomePage1.css"/>
 </head>
 <body>
   <div id="image">
-    <img src="https://www.stradahealthcare.com/wp-content/uploads/2022/01/iStock-1294477039.png" alt="Image">
-  </div>
-  <div id="text-overlay">
-    <h1 class="title">Resources</h1>
-    <hr><hr>
-    <h2 class="subtitle">-Empowering teens through connection and understanding-</h2>
-  </div>
-  <div id="row">
-    <h2 class="text">teens2teens</h2>
-    <a href="HomePage2.html"><button id="homepage">Home</button></a>
-    <a href="ResourcesPage.html"><button id="resources">Resources</button></a>
-    <a href="RealForumPage.html"><button id="forum">Teens Forum</button></a>
-    <a href="MilstonePage.html"><button id="milestone">Moodlink</button></a>
-  </div>
-  <div id="content">
-    <div class="container">
-      <h2>Mental Health</h2>
-      <p>Do you think you have a mental health issue? Read about it.</p>
-      <button id="anxiety-toggle-button">Anxiety</button>
-      <button id="depression-toggle-button">Despression</button>
-      <button id="stress-toggle-button">Stress</button>
-      <button id="fake-bipo-button">Bipolar Disorder</button>
-      <button id="fake-eating-button">Eating Disorder</button>
-      <button id="fake-obcom-button">Obsessive Compulsive Disorder</button>
-      <button id="fake-substance-button">Substance Use</button>
-      <button id="fake-conduct-button">Conduct Disorder</button>
-      <button id="fake-selfharm-button">Self-Harm</button>
-      <button id="fake-pers-button">Personality Disorder</button>
-      <button id="fake-para-button">Paranoia</button>
-      <button id="fake-schiz-button">Schizophrenia</button>
-      <button id="fake-dis-button">Dissociation and Dissociative Disorders</button>
-      <button id="fake-more-button1">More...</button>
-      <h3></h3>
-      <hr></hr>
-      <h2>Therapists in NYC</h2>
-      <p>Look for Therapists around the New York City area:</p>
-    <button id="fake-more-button">More...</button>
+    <img src="https://www.stradahealthcare.com/wp-content/uploads/2022/01/iStock-1294477039.png">
+    <div id="text-overlay">
+      <h1 class="title">CONNECT. SHARE. OVERCOME.</h1>
+      <hr><hr>
+      <h2 class="subtitle">-Empowering teens through connection and understanding-</h2>
+    </div>
+    <div id="row">
+      <h2 class="text">teens2teens</h2>
+      <button id="Sign-up">Sign Up</button>
     </div>
   </div>
 
+  <div id="content">
+    <div class="container">
+      <div class="grid-container">
+        <div class="grid-item">
+          <h2>WHO ARE WE?</h2>
+          <p>Teens 2 Teens is a mental health program created for teens by teens. T2T works towards connecting teens across different schools that are going through mental health issues, big or small, with other teens who may be experiencing similar issues. We also wish to educate teens and others interested in the causes of poor teen mental health and how it affects the teens. At Teens2Teens, our mission is to empower teenagers to take control of their mental health and well-being. We believe in the power of peer support and the importance of having a space where teens can feel heard and valued.</p>
+          <div id="spacer"></div>
+          <p>Teens2Teens was founded by a group of high school friends who recognized the need for better mental health resources and support for teenagers. Through our own struggles, we saw the impact that understanding and support from peers can have, and we wanted to create a platform that offers just that.</p>
+          <hr>
+          <h3>Dara Akinwande | Casey Mattis</h3>
+          <h3>Uzochi Onunaku | Stephanie Owusu</h3>
+          <hr>
+        </div>
+        <div class="grid-item">
+          <h2>WHAT DO WE OFFER?</h2>
+          <p>As teens who have noticed mental issues in our schools and friends, there are way too many that go undocumented or unnoticed. Sometimes, we don't even know if what were feeling is a mental issue.</p>
+          <p>Something as common as stress in high schools can cause a range of symptoms, including: cognitive, emotional, physical, and behavioral. We know how hard it is to search up symtoms and often see something thats way worse than what we might actually have, so we have a database; which stores information on many different mental health issues that go as wide as disorders. Nothing but the facts.</p>
+          <p>And for those out there that are aware of their mental health issue, cant often talk to someone so close to them. This website gives them that confidentiality and reassurance that teens often look for in other people their age through our forums. Our Milestone feature can show teens, that they aren't in it alone.</p>
+        </div>
+      </div>
+    </div>
+  </div>  
+
   <div id="bottom">
-    <div style="height:540px;background: #6c7bad;padding-top: 1px;">
+    <div style="height:540px;background: #ece4dc;padding-top: 1px;">
       <h2>Connect with Us!</h2>
       <div id="instagram">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/768px-Instagram_icon.png" alt="Instagram Icon">
@@ -116,9 +111,9 @@
       messageInput.value = '';
     });
 
-    const button = document.getElementById('homepage');
+    const button = document.getElementById('Sign-up');
     button.addEventListener('click', function() {
-      window.location.href = 'C:/Users/student/Documents/MyNewProject(IFE24)/Experimenting/templates/HomePage2.html';
+      window.location.href = 'C:/Users/student/Documents/MyNewProject(IFE24)/Experimenting/templates/LoginSignUp.html';
     });
   </script>
 </body>
