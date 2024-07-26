@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>teens2teens</title>
+  <link rel="stylesheet" href="C:\Users\student\Documents\MyNewProject(IFE24)\Experimenting\static\styles\HomePage2.css">
+</head>
+<body>
+  <div id="image">
+    <img src="https://www.stradahealthcare.com/wp-content/uploads/2022/01/iStock-1294477039.png">
+    <div id="text-overlay">
+      <h1 class="title">CONNECT. SHARE. OVERCOME.</h1>
+      <hr><hr>
+      <h2 class="subtitle">-Empowering teens through connection and understanding-</h2>
+    </div>
+    <div id="row">
+      <h2 class="text">teens2teens</h2>
+      <button id="homepage">Home</button>
+      <button id="resources">Resources</button>
+      <button id="forum">Teens Forum</button>
+      <button id="milestone">Moodlink</button>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="container">
+      <h2>WHO ARE WE?</h2>
+      <p>Teens 2 Teens is a mental health program created for teens by teens. T2T works towards connecting teens across different schools that are going through mental health issues, big or small, with other teens who may be experiencing similar issues. We also wish to educate teens and others interested in the causes of poor teen mental health and how it affects the teens.</p>
+      <hr></hr>
+      <h3>Dara Akinwande | Casey Mattis</h3>
+      <h3>Uzochi Onunaku | Stephanie Owusu</h3>
+      <hr></hr>
+      <h2>WHAT DO WE OFFER?</h2>
+      <p>As teens who have noticed mental issues in our schools and friends, there are way too many that go undocumented or unnoticed. Sometimes, we don't even know if what were feeling is a mental issue.</p>
+      <p>Something as common as stress in high schools can cause a range of symptoms, including: cognitive, emotional, physical, and behavioral. We know how hard it is to search up symtoms and often see something thats way worse than what we might actually have, so we have a database; which stores information on many different mental health issues that go as wide as disorders. Nothing but the facts.</p>
+      <p>And for those out there that are aware of their mental health issue, cant often talk to someone so close to them. This website gives them that confidentiality and reassurance that teens often look for in other people their age through our forums. Our Milestone feature can show teens, that they aren't in it alone.</p>
+    </div>
+  </div>
+
+  <div id="bottom">
+    <div style="height:540px;background: 
+#fffcef;padding-top: 1px;">
+      <h2>Connect with Us!</h2>
+      <div id="instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/768px-Instagram_icon.png" alt="Instagram Icon">
+        <h3>
+          <a href="https://www.instagram.com/teens_2teens/?igsh=ZXdhdHY3bmh2cGls" target="_blank">Instagram</a>
+        </h3>
+      </div>
+      <div class="section" id="contact">
+        <h1>Let's Work Together</h1>
+      </div>
+      <div class="work-together">
+        <h3>Send Us a Message</h3>
+        <div class="spacer"></div>
+        <form class="form-horizontal" role="form" id="form" method="post">
+          <div class="form-row">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="contact form-control" name="name" id="name" placeholder="Name">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="contact form-control" name="email" id="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="subject" class="col-sm-2 control-label">Subject</label>
+            <div class="col-sm-10">
+              <input type="text" class="contact form-control" name="subject" id="subject" placeholder="Subject">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="message" class="col-sm-2 control-label">Message</label>
+            <div class="col-sm-10">
+              <textarea class="contact form-control" rows="3" name="message" id="message" placeholder="Message"></textarea>
+            </div>
+          </div>
+          <button id="Submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>// Select the form and the input fields by their IDs
+    const form = document.getElementById('form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
+    
+    // Select the submit button
+    const submitButton = document.getElementById('Submit');
+    
+    // Add an event listener for the form submit event
+    form.addEventListener('submit', function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+    
+      // Clear the input fields
+      nameInput.value = '';
+      emailInput.value = '';
+      subjectInput.value = '';
+      messageInput.value = '';
+    });
+
+    const homepageButton = document.getElementById('homepage');
+    document.addEventListener('click', function() {
+      window.location.href = 'C:/Users/student/Documents/MyNewProject(IFE24)/Experimenting/templates/HomePage2.html';
+    });
+
+    const resourceButton = document.getElementById('resources');
+    document.addEventListener('click', function() {
+      window.location.href = 'C:/Users/student/Documents/MyNewProject(IFE24)/Experimenting/templates/ResourcesPage.html';
+    });
+
+    const forumButton = document.getElementById('forum');
+    document.addEventListener('click', function() {
+      window.location.href = 'C:/Users/student/Documents/MyNewProject(IFE24)/Experimenting/templates/RealForumPage.html';
+    });
+  </script>
+</body>
+</html>
