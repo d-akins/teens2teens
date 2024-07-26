@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>teens2teens</title>
+  <link rel="stylesheet" href="C:\Users\student\Documents\MyNewProject(IFE24)\Experimenting\static\styles\MilestonePage.css">
+</head>
+<body>
+  <div id="image">
+    <img src="https://www.stradahealthcare.com/wp-content/uploads/2022/01/iStock-1294477039.png">
+    <div id="text-overlay">
+      <h1 class="title">Milestones</h1>
+      <hr><hr>
+      <h2 class="subtitle">Share your opinions!</h2>
+    </div>
+    <div id="row">
+      <h2 class="text">teens2teens</h2>
+      <homebutton id="homepage">Home</button>
+      <resbutton id="resources">Resources</button>
+      <forumbutton id="forum">Teens Forum</button>
+      <milbutton id="milestone">Moodlink</button>
+    </div>
+  </div>
+
+  <main>
+    <div class="upload-container">
+        <label for="forumSelect">Select the forum you would like to post this to:</label>
+        <select id="forumSelect">
+            <option value="general">General</option>
+            <option value="projects">Projects</option>
+            <option value="achievements">Achievements</option>
+        </select>
+        <div class="caution">
+            <p>Caution: Please avoid sharing personal or sensitive information.</p>
+        </div>
+        <input type="file" id="imageUpload" accept="image/*">
+        <div class="preview">
+            <img id="imagePreview" src="" alt="Image Preview">
+        </div>
+        <textarea id="caption" placeholder="Add a caption..."></textarea>
+        <div id="error-message" class="error-message"></div>
+        <button id="postButton">Post</button>
+    </div>
+    <div id="posts"></div>
+  </main>
+
+  <div id="bottom">
+    <div style="height:540px;background: 
+#fffcef;padding-top: 1px;">
+      <h2>Connect with Us!</h2>
+      <div id="instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/768px-Instagram_icon.png" alt="Instagram Icon">
+        <h3>
+          <a href="https://www.instagram.com/teens_2teens/?igsh=ZXdhdHY3bmh2cGls" target="_blank">Instagram</a>
+        </h3>
+      </div>
+      <div class="section" id="contact">
+        <h1>Let's Work Together</h1>
+      </div>
+      <div class="work-together">
+        <h3>Send Us a Message</h3>
+        <div class="spacer"></div>
+        <form class="form-horizontal" role="form" id="form" method="post">
+          <div class="form-row">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="contact form-control" name="name" id="name" placeholder="Name">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="contact form-control" name="email" id="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="subject" class="col-sm-2 control-label">Subject</label>
+            <div class="col-sm-10">
+              <input type="text" class="contact form-control" name="subject" id="subject" placeholder="Subject">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="message" class="col-sm-2 control-label">Message</label>
+            <div class="col-sm-10">
+              <textarea class="contact form-control" rows="3" name="message" id="message" placeholder="Message"></textarea>
+            </div>
+          </div>
+          <button id="Submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>// Select the form and the input fields by their IDs
+    const form = document.getElementById('form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
+    
+    // Select the submit button
+    const submitButton = document.getElementById('Submit');
+    
+    // Add an event listener for the form submit event
+    form.addEventListener('submit', function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+    
+      // Clear the input fields
+      nameInput.value = '';
+      emailInput.value = '';
+      subjectInput.value = '';
+      messageInput.value = '';
+    });
+
+    const resbutton = document.getElementById('resources');
+    button.addEventListener('click', function() {
+      window.location.href = 'C:/Users/student/Documents/MyNewProject(IFE24)/Experimenting/templates/ResourcesPage.html';
+    });
+
+    const homebutton = document.getElementById('homepage');
+    button.addEventListener('click', function() {
+      window.location.href = 'C:/Users/student/Documents/MyNewProject(IFE24)/Experimenting/templates/HomePage2.html';
+    });
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        const imageUpload = document.getElementById('imageUpload');
+        const imagePreview = document.getElementById('imagePreview');
+        const postButton = document.getElementById('postButton');
+        const postsContainer = document.getElementById('posts');
+        const forumSelect = document.getElementById('forumSelect');
+        const caption = document.getElementById('caption');
+        const errorMessage = document.getElementById('error-message');
+        const badWords = [// English profanities
+            "damn", "hell", "shit", "fuck", "bitch", "bastard", "asshole", "dick", "pussy", "cunt",
+        // English slurs
+            "chink", "spic", "nigger", "nigga", "faggot", "kike", "cracker", "wetback", "gook", "redskin", "raghead",
+        // Spanish profanities
+            "mierda", "joder", "puta", "cabron", "pendejo", "coño", "gilipollas", "culero", "picha", "chingar",
+        // Spanish slurs
+            "panchito", "franchute", "frijolero", "machupichu", "bachiche", "moromierda"]; // Add your list of bad words here
+        imageUpload.addEventListener('change', function () {
+            const file = imageUpload.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        } else {
+            imagePreview.style.display = 'none';
+        }
+        });
+        postButton.addEventListener('click', function () {
+            const forum = forumSelect.value;
+            const captionText = caption.value.trim();
+        if (containsBadWords(captionText)) {
+            errorMessage.textContent = "Your caption contains inappropriate language.";
+            errorMessage.style.display = 'block';
+        } else {
+            errorMessage.style.display = 'none';
+            if (imagePreview.src && captionText) {
+                const post = document.createElement('div');
+                post.classList.add('post');
+                post.innerHTML = `
+                    <img src="${imagePreview.src}" alt="User Image">
+                    <div class="caption">${captionText}</div>
+                    <div class="forum">Posted in: ${forum}</div>
+                `;
+                postsContainer.appendChild(post);
+                imagePreview.style.display = 'none';
+                imagePreview.src = '';
+                caption.value = '';
+                imageUpload.value = '';
+            } else {
+                alert('Please upload an image and add a caption.');
+            }
+        }
+        });
+    function containsBadWords(text) {
+        return badWords.some(word => text.toLowerCase().includes(word));
+    }
+    });
+  </script>
+</body>
+</html>
