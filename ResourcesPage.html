@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>teens2teens</title>
+  <link rel="stylesheet" href="C:\Users\student\Documents\MyNewProject(IFE24)\Experimenting\static\styles\ResourcesPage.css">
+</head>
+<body>
+  <div id="image">
+    <img src="https://i.pinimg.com/originals/46/4a/52/464a5256d4085488d20e761ad43527fb.jpg" alt="Background Image">
+    <div id="text-overlay">
+      <h1 class="title">Resources</h1>
+      <hr><hr>
+      <h2 class="subtitle">-Learn more about Mental Issues | Find a therapist-</h2>
+    </div>
+    <div id="row">
+      <h2 class="text">teens2teens</h2>
+      <homebutton id="homepage">Home</button>
+      <resbutton id="resources">Resources</button>
+      <forumbutton id="forum">Teens Forum</button>
+      <milbutton id="milestone">Moodlink</button>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="container">
+      <h2>Mental Health</h2>
+      <p>Do you think you have a mental health issue? Read about it.</p>
+      <button id="anxiety-toggle-button">Anxiety</button>
+      <button id="depression-toggle-button">Despression</button>
+      <button id="stress-toggle-button">Stress</button>
+      <button id="fake-bipo-button">Bipolar Disorder</button>
+      <button id="fake-eating-button">Eating Disorder</button>
+      <button id="fake-obcom-button">Obsessive Compulsive Disorder</button>
+      <button id="fake-substance-button">Substance Use</button>
+      <button id="fake-conduct-button">Conduct Disorder</button>
+      <button id="fake-selfharm-button">Self-Harm</button>
+      <button id="fake-pers-button">Personality Disorder</button>
+      <button id="fake-para-button">Paranoia</button>
+      <button id="fake-schiz-button">Schizophrenia</button>
+      <button id="fake-dis-button">Dissociation and Dissociative Disorders</button>
+      <button id="fake-more-button1">More...</button>
+      <h3></h3>
+      <hr></hr>
+      <h2>Therapists in NYC</h2>
+      <p>Look for Therapists around the New York City area:</p>
+    <button id="fake-more-button">More...</button>
+    </div>
+  </div>
+
+  <div id="bottom">
+    <div style="height:540px;background: #6c7bad;padding-top: 1px;">
+      <h2>Connect with Us!</h2>
+      <div id="instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/768px-Instagram_icon.png" alt="Instagram Icon">
+        <h3>
+          <a href="https://www.instagram.com/teens_2teens/?igsh=ZXdhdHY3bmh2cGls" target="_blank">Instagram</a>
+        </h3>
+      </div>
+      <div class="section" id="contact">
+        <h1>Let's Work Together</h1>
+      </div>
+      <div class="work-together">
+        <h3>Send Us a Message</h3>
+        <div class="spacer"></div>
+        <form class="form-horizontal" role="form" id="form" method="post">
+          <div class="form-row">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="contact form-control" name="name" id="name" placeholder="Name">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="contact form-control" name="email" id="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="subject" class="col-sm-2 control-label">Subject</label>
+            <div class="col-sm-10">
+              <input type="text" class="contact form-control" name="subject" id="subject" placeholder="Subject">
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="message" class="col-sm-2 control-label">Message</label>
+            <div class="col-sm-10">
+              <textarea class="contact form-control" rows="3" name="message" id="message" placeholder="Message"></textarea>
+            </div>
+          </div>
+          <button id="Submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script>// Select the form and the input fields by their IDs
+    const form = document.getElementById('form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
+    
+    // Select the submit button
+    const submitButton = document.getElementById('Submit');
+    
+    // Add an event listener for the form submit event
+    form.addEventListener('submit', function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+    
+      // Clear the input fields
+      nameInput.value = '';
+      emailInput.value = '';
+      subjectInput.value = '';
+      messageInput.value = '';
+    });
+
+    const button = document.getElementById('homepage');
+    button.addEventListener('click', function() {
+      window.location.href = 'C:/Users/student/Documents/MyNewProject(IFE24)/Experimenting/templates/HomePage2.html';
+    });
+  </script>
+</body>
+</html>
